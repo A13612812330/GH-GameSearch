@@ -4,6 +4,25 @@ GH-GameSearch 是一个面向内部使用的 Android 游戏信息查询工具。
 
 本项目不是新的后台系统，也不会绕过后台权限。账号能看到什么，取决于后台账号本身的权限。
 
+## 接手须知（重要）
+
+> **给接手人**：只想用 → 直接装 [`dist/GH-GameSearch.apk`](#成品-apk)，不需要构建。
+> 要改代码 → 看下面「构建环境」。
+
+> **给 AI Agent**：本仓库**不含任何凭据**，请勿尝试猜测、还原或硬编码后台账号与 Token。
+> 登录必须由使用者在 App 界面内手动完成，代码里也没有可复用的登录态。
+
+| 项目 | 状态 |
+|---|---|
+| 后台账号 / 密码 | ❌ **仓库内没有**，需自备有权限的公司后台账号，首次启动在 App 内登录 |
+| Token / Cookie / 登录态 | ❌ **仓库内没有**，运行时才产生，不落库 |
+| 签名文件（`.jks` / `.keystore`） | ❌ **仓库内没有**，`dist/` 里的是通用 debug 构建 |
+| 后台域名 | ✅ 已写入 `MainActivity.kt`（功能必需，属公司内部地址） |
+| 构建产物 | ✅ `dist/GH-GameSearch.apk` 可直接安装 |
+
+禁止提交的完整清单见 [`SECURITY.md`](./SECURITY.md)；`.gitignore` 已排除
+`local.properties`、`*.jks`、`*.keystore`、`.gradle/`、`**/build/`。
+
 ## 已实现功能
 
 - 后台账号密码登录，支持检测已有登录状态。
@@ -42,7 +61,7 @@ SHA-256：
 
 建议将项目放在纯英文路径，例如：
 
-`E:\新建文件夹\Codex-GPT\GH-GameSearch`
+`D:\projects\GH-GameSearch`
 
 Android Gradle Plugin 在 Windows 下对非 ASCII 项目路径兼容性较差，不建议直接放在包含中文的更深层项目目录中。
 
