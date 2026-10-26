@@ -1,6 +1,6 @@
 # GH-GameSearch
 
-> 📚 **本文档属于 GH 系列交接项目。** 总入口（全部 10 个仓库索引、可用性实测、可复制的 AI Agent prompt）：https://github.com/A13612812330/GH-Handover
+> 📚 **本文档属于 GH 系列交接项目。** 总入口（全部 10 个仓库索引、可用性实测、可复制的 AI Agent prompt）：https://github.com/GHZS-Project/GH-Handover
 
 GH-GameSearch 是一个面向内部使用的 Android 游戏信息查询工具。它通过 WebView 完成后台登录，再使用当前登录账号已有的权限读取游戏信息、详情和镜像数据，并在手机端以更适合查看和复制的界面展示。
 
