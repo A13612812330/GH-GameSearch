@@ -1,0 +1,15 @@
+.gradle/
+.gradle-user-home/
+.build-home/
+.build-tmp/
+.kotlin/
+**/build/
+local.properties
+*.iml
+.idea/
+*.apk
+!dist/GH-GameSearch.apk
+*.aab
+*.jks
+*.keystore
+
